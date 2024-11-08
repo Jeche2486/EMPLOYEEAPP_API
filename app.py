@@ -9,3 +9,10 @@
 #pip3 install flask-restful
 
 from flask import *
+#import pymysql for database connect
+import pymysql
+from flask_restful import Resource, Api
+
+
+# create a flask app
+app = Flask(__name__)
