@@ -35,3 +35,10 @@ class Employees(Resource):
     
     def delete(self):
         return jsonify({"message" : "DELETE REQUEST"})
+    
+    # we need to add our resource/class that we defined along with its corresponding url
+
+    api.add_resource(Employees, '/employees')
+
+    if __name__ == '__main__':
+        app.run(debug=True)
