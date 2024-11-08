@@ -16,3 +16,22 @@ from flask_restful import Resource, Api
 
 # create a flask app
 app = Flask(__name__)
+
+# create an api object 
+api = Api(app)
+
+#we need to make a class for a particular resource
+# the class will inherit from the Resource thus implementing post, get, delete, put request methods
+
+class Employees(Resource):
+    def get(self):
+        return jsonify({"message" : "GET REQUEST"})
+    
+    def post(self):
+        return jsonify({"message" : "POST REQUEST"})
+    
+    def put(self):
+        return jsonify({"message" : "PUT REQUEST"})
+    
+    def delete(self):
+        return jsonify({"message" : "DELETE REQUEST"})
